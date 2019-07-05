@@ -4,7 +4,10 @@ ThisBuild / organization := "$organization$"
 
 lazy val root = (project in file(".")).
   settings(
-    name := "$name$"
+    name := "$name$",
+    assemblyJarName in assembly := "$name$.jar",
+    mainClass in assembly := Some("$organization$.$name$.Main"),
+    test in assembly := {}
   )
 
 libraryDependencies += "org.typelevel" %% "cats-core" % "2.0.0-M4"
