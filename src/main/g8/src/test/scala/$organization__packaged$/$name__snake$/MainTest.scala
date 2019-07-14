@@ -1,6 +1,4 @@
-package $organization$.$name$
-
-import org.scalatest._
+package $organization$.$name;format="snake"$
 
 class MainTest extends TestBase {
   test("main test") {

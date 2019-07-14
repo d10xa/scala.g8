@@ -1,4 +1,4 @@
-package $organization$.$name$
+package $organization$.$name;format="snake"$
 
 object Main {
 
