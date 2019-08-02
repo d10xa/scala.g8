@@ -19,6 +19,45 @@ lazy val root = (project in file(".")).
     )
   )
 
+wartremoverErrors in(Compile, compile) ++= Seq(
+  Wart.Any,
+  Wart.AnyVal,
+  Wart.ArrayEquals,
+  Wart.AsInstanceOf,
+  Wart.DefaultArguments,
+  Wart.EitherProjectionPartial,
+  Wart.Enumeration,
+  Wart.Equals,
+  Wart.ExplicitImplicitTypes,
+  Wart.FinalCaseClass,
+  Wart.FinalVal,
+  Wart.ImplicitConversion,
+  Wart.ImplicitParameter,
+  Wart.IsInstanceOf,
+  Wart.JavaConversions,
+  Wart.JavaSerializable,
+  Wart.LeakingSealed,
+  Wart.MutableDataStructures,
+  Wart.NonUnitStatements,
+  Wart.Nothing,
+  Wart.Null,
+  Wart.Option2Iterable,
+  Wart.OptionPartial,
+  Wart.Overloading,
+  Wart.Product,
+  Wart.PublicInference,
+  Wart.Recursion,
+  Wart.Return,
+  Wart.Serializable,
+  Wart.StringPlusAny,
+  Wart.Throw,
+  Wart.ToString,
+  Wart.TraversableOps,
+  Wart.TryPartial,
+  Wart.Var,
+  Wart.While
+)
+
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "$logback_classic_version$"
 libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "$scala_logging_version$"
 libraryDependencies += "org.scalatest" %% "scalatest" % "$scalatest_version$" % Test
