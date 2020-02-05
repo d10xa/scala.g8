@@ -15,7 +15,8 @@ lazy val root = (project in file(".")).
       "-feature", // warn about misused language features
       "-language:higherKinds", // allow higher kinded types without `import scala.language.higherKinds`
       "-Xlint", // enable handy linter warnings
-      "-Xfatal-warnings" // turn compiler warnings into errors
+      "-Xfatal-warnings", // turn compiler warnings into errors
+      "-Ymacro-annotations" // for @newtype
     )
   )
 
@@ -58,6 +59,9 @@ wartremoverErrors in(Compile, compile) ++= Seq(
   Wart.While
 )
 
-libraryDependencies += "ch.qos.logback" % "logback-classic" % "$logback_classic_version$"
-libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "$scala_logging_version$"
-libraryDependencies += "org.scalatest" %% "scalatest" % "$scalatest_version$" % Test
+addCompilerPlugin("org.typelevel" %% "kind-projector" % "0.11.0" cross CrossVersion.full)
+
+libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
+libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
+libraryDependencies += "io.estatico" %% "newtype" % "0.4.3"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.1.0" % Test
