@@ -1,5 +1,7 @@
 A [Giter8][g8] template for scala project!
 
+[ ![Travis](https://img.shields.io/travis/d10xa/scala.g8.svg)](https://travis-ci.org/d10xa/scala.g8)
+
 Template license
 ----------------
 Written in 2019 by Andrey Stolyarov
