@@ -1,7 +1,7 @@
 package $organization$.$name;format="snake"$
 
-import org.scalatest.FunSuite
-import org.scalatest.Matchers
+import org.scalatest.funsuite.AnyFunSuiteLike
+import org.scalatest.matchers.should.Matchers
 
-abstract class TestBase extends FunSuite with Matchers {
+abstract class TestBase extends AnyFunSuiteLike with Matchers {
 }
