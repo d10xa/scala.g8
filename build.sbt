@@ -19,5 +19,5 @@ libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
 libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
 libraryDependencies += "io.estatico" %% "newtype" % "0.4.3"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.1.0" % Test
-libraryDependencies += "org.typelevel" %% "cats-core" % "2.1.0-RC3"
+libraryDependencies += "org.typelevel" %% "cats-core" % "2.1.0"
 // </for_scala_steward>
