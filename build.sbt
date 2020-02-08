@@ -11,3 +11,13 @@ lazy val root = (project in file("."))
     scriptedLaunchOpts ++= List("-Xms1024m", "-Xmx1024m", "-XX:ReservedCodeCacheSize=128m", "-Xss2m", "-Dfile.encoding=UTF-8"),
     resolvers += Resolver.url("typesafe", url("http://repo.typesafe.com/typesafe/ivy-releases/"))(Resolver.ivyStylePatterns)
   )
+
+// <for_scala_steward issue="https://github.com/fthomas/scala-steward/issues/1286">
+addCompilerPlugin("org.typelevel" %% "kind-projector" % "0.11.0" cross CrossVersion.full)
+
+libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
+libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
+libraryDependencies += "io.estatico" %% "newtype" % "0.4.3"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.1.0" % Test
+libraryDependencies += "org.typelevel" %% "cats-core" % "2.1.0-RC3"
+// </for_scala_steward>
