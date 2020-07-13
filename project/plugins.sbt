@@ -3,5 +3,5 @@ libraryDependencies += { "org.scala-sbt" %% "scripted-plugin" % sbtVersion.value
 
 // <for_scala_steward issue="https://github.com/fthomas/scala-steward/issues/1286">
 addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.10")
-addSbtPlugin("org.wartremover" % "sbt-wartremover" % "2.4.9")
+addSbtPlugin("org.wartremover" % "sbt-wartremover" % "2.4.10")
 // </for_scala_steward>
