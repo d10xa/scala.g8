@@ -20,6 +20,7 @@ lazy val root = (project in file("."))
     ),
     addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.3.1"),
     libraryDependencies ++= Seq(
+      "ch.qos.logback" % "logback-classic" % "1.2.3",
       "io.chrisdavenport" %% "log4cats-slf4j" % "1.1.1",
       "org.typelevel" %% "cats-core" % "2.2.0",
       "org.typelevel" %% "cats-effect" % "2.2.0",
