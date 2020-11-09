@@ -1,9 +1,11 @@
 package $organization$.$name;format="snake"$
 
-object Main {
+import $organization$.$name;format="snake"$.application.Context
+import cats.effect.ExitCode
+import cats.effect.IO
+import cats.effect.IOApp
 
-  def main(args: Array[String]): Unit = {
-    println("hello world")
-  }
-
+object Main extends IOApp {
+  override def run(args: List[String]): IO[ExitCode] =
+    Context.create[IO](args).use(_.run)
 }
