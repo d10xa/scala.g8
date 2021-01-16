@@ -13,7 +13,7 @@ lazy val root = (project in file("."))
   )
 
 // <for_scala_steward issue="https://github.com/fthomas/scala-steward/issues/1286">
-addCompilerPlugin("org.typelevel" %% "kind-projector" % "0.11.2" cross CrossVersion.full)
+addCompilerPlugin("org.typelevel" %% "kind-projector" % "0.11.3" cross CrossVersion.full)
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
 libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
