@@ -22,7 +22,7 @@ lazy val root = (project in file("."))
     libraryDependencies ++= Seq(
       "ch.qos.logback" % "logback-classic" % "1.2.3",
       "io.chrisdavenport" %% "log4cats-slf4j" % "1.1.1",
-      "org.typelevel" %% "cats-core" % "2.4.1",
+      "org.typelevel" %% "cats-core" % "2.4.2",
       "org.typelevel" %% "cats-effect" % "2.2.0",
       "io.estatico" %% "newtype" % "0.4.4",
       "org.scalatest" %% "scalatest" % "3.2.3" % Test
