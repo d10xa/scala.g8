@@ -30,7 +30,7 @@ lazy val root = (project in file("."))
   )
 
 lazy val commonSettings = Seq(
-  scalaVersion := "2.13.3",
+  scalaVersion := "2.13.5",
   organization := "$organization$",
   version := "0.1.0-SNAPSHOT"
 )
