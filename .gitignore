@@ -1,5 +1,6 @@
 .attach_pid*
 .bloop/
+.bsp/
 .DS_Store
 .idea/
 .metals/

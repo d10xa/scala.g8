@@ -2,9 +2,6 @@ lazy val root = (project in file("."))
   .settings(commonSettings: _*)
   .settings(
     name := "$name$",
-    assemblyJarName in assembly := "$name$.jar",
-    mainClass in assembly := Some("$organization$.$name;format="snake"$.Main"),
-    test in assembly := {},
     scalacOptions := Seq(
       "-encoding", "UTF-8", // source files are in UTF-8
       "-deprecation", // warn about use of deprecated APIs
@@ -15,17 +12,18 @@ lazy val root = (project in file("."))
       "-Ymacro-annotations", // enable support for macro annotations, formerly in macro paradise.
       "-Wvalue-discard" // warn when non-Unit expression results are unused.
     ),
-    addCompilerPlugin(
-      ("org.typelevel" %% "kind-projector" % "0.11.3").cross(CrossVersion.full)
-    ),
-    addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.3.1"),
     libraryDependencies ++= Seq(
       "ch.qos.logback" % "logback-classic" % "1.2.3",
-      "io.chrisdavenport" %% "log4cats-slf4j" % "1.1.1",
-      "org.typelevel" %% "cats-core" % "2.5.0",
-      "org.typelevel" %% "cats-effect" % "2.2.0",
-      "io.estatico" %% "newtype" % "0.4.4",
-      "org.scalatest" %% "scalatest" % "3.2.7" % Test
+      ("org.typelevel" %% "log4cats-slf4j" % "2.0.1")
+        .cross(CrossVersion.for3Use2_13),
+      ("org.typelevel" %% "cats-core" % "2.5.0")
+        .cross(CrossVersion.for3Use2_13),
+      ("org.typelevel" %% "cats-effect" % "3.0.1")
+        .cross(CrossVersion.for3Use2_13),
+      ("io.estatico" %% "newtype" % "0.4.4")
+        .cross(CrossVersion.for3Use2_13),
+      ("org.scalatest" %% "scalatest" % "3.2.7" % Test)
+        .cross(CrossVersion.for3Use2_13)
     )
   )
 
