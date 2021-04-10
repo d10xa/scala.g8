@@ -18,7 +18,7 @@ lazy val root = (project in file("."))
         .cross(CrossVersion.for3Use2_13),
       ("org.typelevel" %% "cats-core" % "2.5.0")
         .cross(CrossVersion.for3Use2_13),
-      ("org.typelevel" %% "cats-effect" % "3.0.1")
+      ("org.typelevel" %% "cats-effect" % "3.0.2")
         .cross(CrossVersion.for3Use2_13),
       ("io.estatico" %% "newtype" % "0.4.4")
         .cross(CrossVersion.for3Use2_13),
