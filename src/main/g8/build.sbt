@@ -22,7 +22,7 @@ lazy val root = (project in file("."))
         .cross(CrossVersion.for3Use2_13),
       ("io.estatico" %% "newtype" % "0.4.4")
         .cross(CrossVersion.for3Use2_13),
-      ("org.scalatest" %% "scalatest" % "3.2.7" % Test)
+      ("org.scalatest" %% "scalatest" % "3.2.8" % Test)
         .cross(CrossVersion.for3Use2_13)
     )
   )
