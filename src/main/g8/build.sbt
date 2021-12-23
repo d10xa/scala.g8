@@ -13,7 +13,7 @@ lazy val root = (project in file("."))
       "-Wvalue-discard" // warn when non-Unit expression results are unused.
     ),
     libraryDependencies ++= Seq(
-      "ch.qos.logback" % "logback-classic" % "1.2.3",
+      "ch.qos.logback" % "logback-classic" % "1.2.10",
       ("org.typelevel" %% "log4cats-slf4j" % "2.0.1")
         .cross(CrossVersion.for3Use2_13),
       ("org.typelevel" %% "cats-core" % "2.5.0")
