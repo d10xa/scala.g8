@@ -14,7 +14,7 @@ lazy val root = (project in file("."))
 
 // <for_scala_steward issue="https://github.com/fthomas/scala-steward/issues/1286">
 libraryDependencies ++= Seq(
-  "ch.qos.logback" % "logback-classic" % "1.2.3",
+  "ch.qos.logback" % "logback-classic" % "1.2.11",
   ("org.typelevel" %% "log4cats-slf4j" % "2.0.1")
     .cross(CrossVersion.for3Use2_13),
   ("org.typelevel" %% "cats-core" % "2.5.0")
