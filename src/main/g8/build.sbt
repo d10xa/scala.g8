@@ -16,7 +16,7 @@ lazy val root = (project in file("."))
       "ch.qos.logback" % "logback-classic" % "1.2.3",
       ("org.typelevel" %% "log4cats-slf4j" % "2.0.1")
         .cross(CrossVersion.for3Use2_13),
-      ("org.typelevel" %% "cats-core" % "2.5.0")
+      ("org.typelevel" %% "cats-core" % "2.9.0")
         .cross(CrossVersion.for3Use2_13),
       ("org.typelevel" %% "cats-effect" % "3.0.1")
         .cross(CrossVersion.for3Use2_13),
